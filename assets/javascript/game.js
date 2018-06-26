@@ -8,11 +8,15 @@ console.log(randomWord);
 var underScore = [];
 function createUnderScore() {
     for (var i=0; i < randomWord.length; i++){
-        underScore.push("_");
+        var push = underScore.push("_");
+        underScore.join(' ');
     }
     return underScore;
+    
 }
-console.log(createUnderScore());
+createUnderScore();
+console.log(underScore);
+document.getElementById("guess").innerHTML = underScore;
 
 var correctGuess = [];
 var wrongGuess = [];
